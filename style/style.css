@@ -1,0 +1,36 @@
+*{
+    top: 0;
+    margin: 0;
+}
+
+nav{
+    background-color: #FEFAE0;
+    display: flex;
+}
+
+h1{
+    color: #F4AAA0;
+    font-size: 40px;
+    margin: 10px 15px;
+}
+
+nav button{
+    margin: 15px 10px;
+    padding: 0 15px;
+    background-color: transparent;
+    color: #929B77;
+    border: 0;
+    transition: 0.5s;
+    font-size: 14px;
+}
+
+nav button:hover{
+    cursor: pointer;
+    font-weight: 900;
+    color: #F4AAA0;
+    font-size: 15px;
+}
+
+#logoNav{
+
+}
