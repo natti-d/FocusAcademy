@@ -50,13 +50,11 @@ header{
     background-image: url('../images/bannerHeaderHome.jpg'); 
     background-position: center; 
     background-repeat: no-repeat; 
-    background-size: cover; 
-    
+    background-size: cover;     
 }
 
 
 h1{
-    font-size: 80px;
     color: #F4AAA0;
     padding: 5px 0 0 0;
     font-size: 120px;
@@ -94,7 +92,6 @@ header p{
     margin: auto;
     align-items: center;
     font-size: 18px;
-
 }
 
 #aboutUs h3{
@@ -106,16 +103,9 @@ header p{
 
 #aboutUs ul{
     margin: 10px 0;
+    list-style-type: circle !important;
 }
 
-#aboutUs li{
-    display: flex;
-}
-
-#aboutUs li aside{
-    display: flex;
-    margin: 0 8px;
-}
 
 #studentGallery #cardGallery{    
     display: flex;
@@ -148,6 +138,14 @@ header p{
 
 #studentGallery .container {
     padding: 2px 16px;
+}
+
+#studentGallery img{
+    width: 280px;
+}
+
+#productImg, #landscapeImg{
+    height: 322px;
 }
 
 .btn-course {
@@ -184,4 +182,133 @@ footer h2{
 footer h3{
     text-align: center;
     font-size: 15px;
+}
+
+@media only screen and (max-width: 1024px){
+    h1{
+        font-size: 80px;
+        -webkit-text-stroke-width: 0.2rem;
+    }
+
+    #aboutUs{
+        font-size: 17px;
+        width: 90%;
+    }
+
+    #studentGallery img{
+        width: 200px;
+    }
+
+    .card{
+        width: 200px;
+    }
+    
+    #productImg, #landscapeImg{
+        height: 229px;
+    }
+
+    .btn-course {
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    h1{
+        font-size: 50px;
+        -webkit-text-stroke-width: 0.1rem;
+    }
+
+    #studentGallery #cardGallery{    
+        display: block;
+    }
+
+    #studentGallery img{
+        width: 280px;
+    }
+
+    .card{
+        width: 280px;
+        margin: 20px auto;
+    }
+    
+    #cardGallery{
+        width: 100%;
+    }
+
+    #cardGallery div{
+        align-items: center;
+    }
+
+    #productImg, #landscapeImg{
+        height: 320px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #logoNav{
+        display: none;
+    }
+
+    #titleNav{
+        font-size: 35px;
+    }
+
+    nav button{
+        font-size: 13px;
+        margin: 0 2px 10px 2px;
+    }
+
+    h1{
+        font-size: 38px;
+        -webkit-text-stroke-width: 0.1rem;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+
+    header p{
+        color: #FEFAE0;
+        font-size: 18px;
+    }
+
+    #aboutUs{
+        font-size: 15px;
+        width: 90%;
+    }
+
+    #aboutUs fieldset div{
+        margin: 0px 10px;
+    }
+
+    #studentGallery h2{
+        margin: 10px 5px 15px 5px;
+    }
+
+    #studentGallery #cardGallery{    
+        display: block;
+    }
+
+    #studentGallery img{
+        width: 280px;
+    }
+    
+    .card{
+        width: 280px;
+        margin: 20px auto;
+    }
+
+    #cardGallery{
+        width: 100%;
+    }
+
+    #cardGallery div{
+        align-items: center;
+    }
+    
+    #productImg, #landscapeImg{
+        height: 320px;
+    }
+
 }
