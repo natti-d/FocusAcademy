@@ -104,14 +104,14 @@ fieldset{
     border-style: outset;
 }
 
-#aboutUs h2, #studentGallery h2, #landscapeCourse h2, #portraitCourse h2, #productCourse h2{
+#aboutUs h2, #studentGallery h2, #landscapeCourse h2, #portraitCourse h2, #productCourse h2, #signUp h2{
     color: #929B77;
     font-size: 30px;
     text-align: center;
     margin: 10px 0 15px 0;
 }
 
-#aboutUs, #landscapeCourse, #portraitCourse, #productCourse{
+#aboutUs, #landscapeCourse, #portraitCourse, #productCourse, #signUp{
     display: block;
     justify-content: center;
     width: 80%;
@@ -234,6 +234,29 @@ fieldset{
     justify-content: center;
 }
 
+#signUp{
+    width: 60%;
+    background-color: #fdfaea;
+}
+
+form{
+    width: 100%;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+form label{
+    font-size: 15px;
+}
+
+form input{
+    font-size: 13px;
+}
+
 
 @media only screen and (max-width: 1024px){
     h1{
@@ -328,7 +351,7 @@ fieldset{
     }
 
     /*Семинари*/
-    #landscapeCourse, #portraitCourse, #productCourse{
+    #landscapeCourse, #portraitCourse, #productCourse, #signUp{
         margin: 10px auto;
         display: flex;
     }
@@ -348,6 +371,11 @@ fieldset{
     .coursesImg, .hiddenImg{
         width: 180px;
         padding: 0 3px;
+    }
+
+    /*Записване*/
+    #signUp{
+        width: 90%;
     }
 }
 

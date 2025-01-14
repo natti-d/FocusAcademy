@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ФокусАкадемия</title>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Lora-->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <!--Ubunutu-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!--Montserrat-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <!--Чист css-->
+    <link rel="stylesheet" href="../style/style.css">
+    <!--CSS за шрифответе-->
+    <link rel="stylesheet" href="../style/fonts.css">
+
+    <!--Икона-->
+    <link rel="icon" href="../images/logo_icon.ico">
+</head>
+
+<body>
+    <!--Представителна част-->
+    <header>
+        <!--Навигационно меню-->
+        <nav>
+            <div style="text-align: center;">
+                <p class="lora-xl" id="titleNav">Фокус<span style="color: #929B77;">Академия</span></p>
+                <button class="montserrat-xl">За нас</button>
+                <button class="montserrat-xl">Семинари</button>
+                <button class="montserrat-xl">Запиши се</button>
+            </div>
+            <div style="align-self: center;">
+                <img src="../images/logo.png" alt="Лого на ФокусАкадемия" id="logoNav">
+            </div>
+        </nav>
+        <p class="montserrat-xs" style="padding: 50px 0 0 0;">Добре дошли във</p>
+        <h1 class="lora-xl">Фокус<span style="color: #929B77;">Академия</span></h1>
+        <p class="montserrat-xs" style="padding: 20px 0 50px 0;">мястото, на което записвате вашия фотографски път</p>
+    </header>
+
+    <!--Форма за записване-->
+    <main>
+        <fieldset id="signUp">
+            <legend>
+                <h2 class="ubuntu-lg">Форма за записване</h2>
+            </legend>
+            <form method="post">
+                <div>
+                    <label for="fName" class="montserrat-md">Вашето Име</label>
+                    <input type="text" name="fName" id="firstName" placeholder="Вашето Име" class="montserrat-sm">
+                </div>
+                <div>
+                    <label for="lName" class="montserrat-md">Вашата Фамилия</label>
+                    <input type="text" name="lName" id="lastName" placeholder="Вашата Фамилия" class="montserrat-sm">
+                </div>
+                <div>
+                    <label for="emailAddress" class="montserrat-md">Е-мейл адрес</label>
+                    <input type="email" name="emailAddress" id="email" placeholder="Е-мейл адрес" class="montserrat-sm">
+                </div>
+                <div>
+                    <label for="pass" class="montserrat-md">Парола</label>
+                    <input type="password" name="pass" id="password" placeholder="Парола" class="montserrat-sm">
+                </div>
+                <div>
+                    <label for="cpmfPass" class="montserrat-md">Потвърдете Парола</label>
+                    <input type="cpmfPassword" name="cpmfPass" id="cpmfPassword" placeholder="Потвърдете Парола" class="montserrat-sm">
+                </div>
+                <div>
+                    <label for="bdayDate" class="montserrat-md">Дата на раждане</label>
+                    <input type="date" name="bdayDate" id="bday" class="montserrat-sm">
+                </div>
+                <div>
+                    <label for="course" class="montserrat-md">Изберете семинар</label>
+                    <select name="course" id="courseSelect" class="montserrat-sm">
+                        <option value="Пейзажна фотография" class="montserrat-sm" selected>Пейзажна фотография</option>
+                        <option value="Портретна фотография" class="montserrat-sm">Портретна фотография</option>
+                        <option value="Продуктова фотография" class="montserrat-sm">Продуктова фотография</option>
+                    </select>
+                </div>
+                <div style="flex-direction: row; justify-content: space-around;">
+                    <div style="width: 40%;">
+                        <label for="dateCourse" class="montserrat-md">Дата на семинар</label>
+                        <input type="date" name="dateCourse" id="dateC" class="montserrat-sm">
+                    </div>
+                    <div style="width: 40%;">
+                        <label for="timeCourse" class="montserrat-md">Час на семинар</label>
+                        <input type="time" name="timeCourse" id="timeC" class="montserrat-sm">
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+    </main>
+
+    <!--Финална част-->
+    <footer style="border-top: 10px dashed #FEFAE0;">
+        <h2 class="ubuntu-md">All copyrights reserved.®</h2>
+        <h3 class="ubuntu-sm">Наталия Димитрова</h3>
+    </footer>
+
+</body>
+
+</html>
