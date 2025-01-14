@@ -228,7 +228,7 @@ fieldset{
     list-style-type: circle !important;
 }
 
-.infoCourse .btn-course{
+.infoCourse .btn-course, #aboutUs .btn-course{
     width: 100%;
     display: flex;
     justify-content: center;
