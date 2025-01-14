@@ -205,6 +205,10 @@ fieldset{
     font-size: 15px;
 }
 
+.hiddenImg{
+    display: none;
+}
+
 .infoCourse h3{
     color: #F4AAA0;
     font-size: 23px;
@@ -259,6 +263,36 @@ fieldset{
         font-size: 12px;
     }
 
+    /*Семинари*/
+    #landscapeCourse .infoCourse, #productCourse .infoCourse{
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+
+    #portraitCourse .infoCourse{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .infoCourse h3{
+        color: #F4AAA0;
+        font-size: 23px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .infoCourse div{
+        margin: 5px 0;
+    }
+
+    .hiddenImg{
+        display: flex;
+    }
+
+    .coursesImg, .hiddenImg{
+        width: 250px;
+    }
+
 }
 
 @media only screen and (max-width: 768px){
@@ -291,6 +325,29 @@ fieldset{
 
     #productImg, #landscapeImg{
         height: 320px;
+    }
+
+    /*Семинари*/
+    #landscapeCourse, #portraitCourse, #productCourse{
+        margin: 10px auto;
+        display: flex;
+    }
+
+    .infoCourse div{
+        font-size: 13px;
+    }
+
+    .infoCourse h3{
+        font-size: 20px;
+    }
+    
+    .infoCourse h4{
+        font-size: 15px;
+    }
+
+    .coursesImg, .hiddenImg{
+        width: 180px;
+        padding: 0 3px;
     }
 }
 
@@ -359,6 +416,15 @@ fieldset{
     
     #productImg, #landscapeImg{
         height: 320px;
+    }
+
+    /*Семинари*/
+    .hiddenImg{
+        display: none;
+    }
+
+    .hiddenText{
+        display: none;
     }
 
     footer h2{
