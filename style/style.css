@@ -40,7 +40,6 @@ nav button:hover{
     height: 100px;
 }
 
-/*Начало*/
 header{
     width: 100%;
     height: 60%;
@@ -67,6 +66,28 @@ header p{
     font-size: 20px;
 }
 
+main{
+    margin: 0 0 10px 0;
+}
+
+footer{
+    background-color: #929B77;
+    color: #FEFAE0;
+    width: 100%;
+    padding: 30px 0;
+}
+
+footer h2{
+    text-align: center;
+    font-size: 20px;
+}
+
+footer h3{
+    text-align: center;
+    font-size: 15px;
+}
+
+/*Начало*/
 #breakLine {
     display: flex;
     width: 100%;
@@ -78,14 +99,19 @@ header p{
     margin: 0 5px;
 }
 
-#aboutUs h2, #studentGallery h2{
+fieldset{
+    border-color: #F4AAA0;
+    border-style: outset;
+}
+
+#aboutUs h2, #studentGallery h2, #landscapeCourse h2, #portraitCourse h2, #productCourse h2{
     color: #929B77;
     font-size: 30px;
     text-align: center;
     margin: 10px 0 15px 0;
 }
 
-#aboutUs{
+#aboutUs, #landscapeCourse, #portraitCourse, #productCourse{
     display: block;
     justify-content: center;
     width: 80%;
@@ -166,30 +192,52 @@ header p{
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-footer{
-    background-color: #929B77;
-    color: #FEFAE0;
-    width: 100%;
-    padding: 30px 0;
-    border-top: 10px dashed #F4AAA0;
+/*Семинари*/
+.infoCourse{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;    
 }
 
-footer h2{
-    text-align: center;
-    font-size: 20px;
-}
-
-footer h3{
-    text-align: center;
+.infoCourse div{
+    margin: 10px;
+    justify-content: space-around; 
     font-size: 15px;
 }
+
+.infoCourse h3{
+    color: #F4AAA0;
+    font-size: 23px;
+    text-align: center;
+    margin: 10px 0 5px 0;
+}
+
+.infoCourse h4{
+    color: #F4AAA0;
+    font-size: 18px;
+    text-align: start;
+    margin: 5px 0 0 0;
+}
+
+.infoCourse ul{
+    margin: 3px 0 10px 0;
+    list-style-type: circle !important;
+}
+
+.infoCourse .btn-course{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 
 @media only screen and (max-width: 1024px){
     h1{
         font-size: 80px;
         -webkit-text-stroke-width: 0.2rem;
     }
-
+    
+    /*Начало*/
     #aboutUs{
         font-size: 17px;
         width: 90%;
@@ -202,7 +250,7 @@ footer h3{
     .card{
         width: 200px;
     }
-    
+
     #productImg, #landscapeImg{
         height: 229px;
     }
@@ -219,6 +267,7 @@ footer h3{
         -webkit-text-stroke-width: 0.1rem;
     }
 
+    /*Начало*/
     #studentGallery #cardGallery{    
         display: block;
     }
@@ -264,6 +313,7 @@ footer h3{
         -webkit-text-stroke-width: 0.1rem;
     }
 
+    /*Начало*/
     h2{
         font-size: 25px;
     }
@@ -309,6 +359,14 @@ footer h3{
     
     #productImg, #landscapeImg{
         height: 320px;
+    }
+
+    footer h2{
+        font-size: 17px;
+    }
+    
+    footer h3{
+        font-size: 12px;
     }
 
 }
