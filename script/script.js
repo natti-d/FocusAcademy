@@ -9,9 +9,13 @@ function validateFName() {
     let temp = document.getElementById('firstName').value.trim();
     if (!bgRegex.test(temp)) {
         result += ("Името е невалидно. Трябва да се въведе на кирилица с първа главна буква.\n");
+        document.getElementById('firstName').style.borderColor = 'red';      
+        document.getElementById('firstName').style.color = 'red';
         return false;
     }
     else {
+        document.getElementById('firstName').style.borderColor = '#929B77';      
+        document.getElementById('firstName').style.color = '#6d7556';
         return true;
     }
 }
@@ -20,9 +24,13 @@ function validateLName() {
     let temp = document.getElementById('lastName').value.trim();
     if (!bgRegex.test(temp)) {
         result += ("Фамилията е невалидна. Трябва да се въведе на кирилица с първа главна буква.\n");
+        document.getElementById('lastName').style.borderColor = 'red';      
+        document.getElementById('lastName').style.color = 'red';
         return false;
     }
     else {
+        document.getElementById('lastName').style.borderColor = '#929B77';      
+        document.getElementById('lastName').style.color = '#6d7556';
         return true;
     }
 }
@@ -31,9 +39,13 @@ function validateEmail() {
     let temp = document.getElementById('email').value;
     if (!emailRegex.test(temp)) {
         result += ("Е-мейл адресът е невалиден. Стандартен формат за е-мейл: example@example.com.\n");
+        document.getElementById('email').style.borderColor = 'red';      
+        document.getElementById('email').style.color = 'red';
         return false;
     }
     else {
+        document.getElementById('email').style.borderColor = '#929B77';      
+        document.getElementById('email').style.color = '#6d7556';
         return true;
     }
 }
@@ -42,9 +54,13 @@ function validatePass() {
     let temp = document.getElementById('password').value.trim();
     if (!passwordRegex.test(temp)) {
         result +=("Паролата е невалидна. Тя трябва да бъде поне 8 символа, да съдържа букви на кирилица или латиница, и поне една цифра.\n");
+        document.getElementById('password').style.borderColor = 'red';      
+        document.getElementById('password').style.color = 'red';
         return false;
     }
     else {
+        document.getElementById('password').style.borderColor = '#929B77';      
+        document.getElementById('password').style.color = '#6d7556';
         return true;
     }
 }
@@ -53,10 +69,14 @@ function validateConf() {
     let a = document.getElementById('password').value.trim();
     let b = document.getElementById('confPassword').value.trim();
     if (a !== b) {
-        result += ("Паролите не съответстват.\n")
+        result += ("Паролите не съответстват.\n");
+        document.getElementById('confPassword').style.borderColor = 'red';      
+        document.getElementById('confPassword').style.color = 'red';
         return false;
     }
     else {
+        document.getElementById('confPassword').style.borderColor = '#929B77';      
+        document.getElementById('confPassword').style.color = '#6d7556';
         return true;
     }
 }
@@ -144,6 +164,7 @@ function validateAllData(){
     }
     else{
         alert(result);
+        location.href = '../structure/home.html';
     }
 }
 
