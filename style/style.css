@@ -74,7 +74,8 @@ footer{
     background-color: #929B77;
     color: #FEFAE0;
     width: 100%;
-    padding: 30px 0;
+    padding: 30px 0 15px 0;
+    border-top: 10px dashed #FEFAE0;
 }
 
 footer h2{
@@ -85,6 +86,15 @@ footer h2{
 footer h3{
     text-align: center;
     font-size: 15px;
+}
+
+#contactDiv{
+    display: flex;
+    justify-content: center;
+}
+
+#contactDiv img{
+    margin: 2px;
 }
 
 /*Начало*/
@@ -103,6 +113,7 @@ fieldset{
     border-color: #F4AAA0;
     border-style: outset;
 }
+
 
 #aboutUs h2, #studentGallery h2, #landscapeCourse h2, #portraitCourse h2, #productCourse h2, #signUp h2{
     color: #929B77;
@@ -263,6 +274,10 @@ form input, form select{
     background-color: #E9EDC9;
 }
 
+.asideSignUp{
+    color: red;
+}
+
 #btnDiv{
     display: flex;
     flex-direction: row;
@@ -355,6 +370,10 @@ form input, form select{
         -webkit-text-stroke-width: 0.1rem;
     }
 
+    #contactDiv img{
+        margin: 2.5px;
+    }
+
     /*Начало*/
     #studentGallery #cardGallery{    
         display: block;
@@ -407,6 +426,7 @@ form input, form select{
     /*Записване*/
     #signUp{
         width: 90%;
+        margin: 0 auto;
     }
 }
 
@@ -428,6 +448,19 @@ form input, form select{
         font-size: 38px;
         -webkit-text-stroke-width: 0.1rem;
     }
+
+    #contactDiv img{
+        margin: 4px;
+    }    
+
+    footer h2{
+        font-size: 17px;
+    }
+    
+    footer h3{
+        font-size: 12px;
+    }
+
 
     /*Начало*/
     h2{
@@ -493,15 +526,15 @@ form input, form select{
 
     .btnForm{
         margin: 5px auto auto auto;
-        width: 40%;
+        width: 90%;
     }
 
-    footer h2{
-        font-size: 17px;
-    }
-    
-    footer h3{
-        font-size: 12px;
+     #signUp{
+        width: 80%;
+    }    
+
+    form select{
+        width: 100%;
     }
 
 }
