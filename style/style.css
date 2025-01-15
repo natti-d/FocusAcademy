@@ -174,7 +174,7 @@ fieldset{
     height: 322px;
 }
 
-.btn-course {
+.btnCourse {
     padding: 10px;
     border-radius: 8px;
     margin: 10px auto 3px auto;
@@ -186,7 +186,7 @@ fieldset{
     transition: 0.5s;
 }
 
-.btn-course:hover{
+.btnCourse:hover, .btnForm:hover{
     cursor: pointer;
     background-color: #F4AAA0;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -228,12 +228,13 @@ fieldset{
     list-style-type: circle !important;
 }
 
-.infoCourse .btn-course, #aboutUs .btn-course{
+.infoCourse .btnCourse, #aboutUs .btnCourse{
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
+/*Записване*/
 #signUp{
     width: 60%;
     background-color: #fdfaea;
@@ -255,6 +256,25 @@ form label{
 
 form input{
     font-size: 13px;
+}
+
+#btnDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+.btnForm {
+    padding: 7px;
+    border-radius: 8px;
+    margin: auto;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #929B77;
+    border: none;
+    color: #FEFAE0;
+    transition: 0.5s;
 }
 
 
@@ -282,7 +302,7 @@ form input{
         height: 229px;
     }
 
-    .btn-course {
+    .btnCourse, .btnForm {
         font-size: 12px;
     }
 
@@ -315,6 +335,12 @@ form input{
     .coursesImg, .hiddenImg{
         width: 250px;
     }
+
+    /*Запиши се*/
+    .btnForm{
+        font-size: 15px;
+    }
+    
 
 }
 
@@ -453,6 +479,16 @@ form input{
 
     .hiddenText{
         display: none;
+    }
+
+    /*Запиши се*/
+    #btnDiv{
+        flex-direction: column;
+    }
+
+    .btnForm{
+        margin: 5px auto auto auto;
+        width: 40%;
     }
 
     footer h2{

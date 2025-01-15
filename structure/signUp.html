@@ -25,20 +25,31 @@
     <!--CSS за шрифответе-->
     <link rel="stylesheet" href="../style/fonts.css">
 
+    <!--JSON-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+
     <!--Икона-->
     <link rel="icon" href="../images/logo_icon.ico">
+
 </head>
 
 <body>
+
+    <script src="../script/script.js"></script>
     <!--Представителна част-->
     <header>
         <!--Навигационно меню-->
         <nav>
             <div style="text-align: center;">
                 <p class="lora-xl" id="titleNav">Фокус<span style="color: #929B77;">Академия</span></p>
-                <button class="montserrat-xl">За нас</button>
-                <button class="montserrat-xl">Семинари</button>
-                <button class="montserrat-xl">Запиши се</button>
+                <button class="montserrat-xl" onclick="location.href = '../structure/home.html'">За нас</button>
+                <button class="montserrat-xl" onclick="location.href = '../structure/seminars.html'">Семинари</button>
+                <button class="montserrat-xl" onclick="location.href = '../structure/signUp.html'">Запиши се</button>
             </div>
             <div style="align-self: center;">
                 <img src="../images/logo.png" alt="Лого на ФокусАкадемия" id="logoNav">
@@ -55,52 +66,63 @@
             <legend>
                 <h2 class="ubuntu-lg">Форма за записване</h2>
             </legend>
-            <form method="post">
+            <form method="post" action="../structure/signUp.html" id="signUpForm">
                 <div>
                     <label for="fName" class="montserrat-md">Вашето Име</label>
-                    <input type="text" name="fName" id="firstName" placeholder="Вашето Име" class="montserrat-sm">
+                    <input type="text" name="fName" id="firstName" placeholder="Вашето Име" class="montserrat-sm" required>
                 </div>
                 <div>
                     <label for="lName" class="montserrat-md">Вашата Фамилия</label>
-                    <input type="text" name="lName" id="lastName" placeholder="Вашата Фамилия" class="montserrat-sm">
+                    <input type="text" name="lName" id="lastName" placeholder="Вашата Фамилия" class="montserrat-sm" required>
                 </div>
                 <div>
                     <label for="emailAddress" class="montserrat-md">Е-мейл адрес</label>
-                    <input type="email" name="emailAddress" id="email" placeholder="Е-мейл адрес" class="montserrat-sm">
+                    <input type="email" name="emailAddress" id="email" placeholder="Е-мейл адрес" class="montserrat-sm"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" ` required>
                 </div>
                 <div>
                     <label for="pass" class="montserrat-md">Парола</label>
-                    <input type="password" name="pass" id="password" placeholder="Парола" class="montserrat-sm">
+                    <input type="password" name="pass" id="password" placeholder="Парола" class="montserrat-sm" required>
+                        <aside style="font-size: 10px;" class="ubuntu-xs">Паролата трябва да бъде поне 8 символа, да съдържа букви на кирилица или латиница, и поне една цифра, без интервали.</aside>
                 </div>
                 <div>
-                    <label for="cpmfPass" class="montserrat-md">Потвърдете Парола</label>
-                    <input type="cpmfPassword" name="cpmfPass" id="cpmfPassword" placeholder="Потвърдете Парола" class="montserrat-sm">
+                    <label for="confPass" class="montserrat-md">Потвърдете Парола</label>
+                    <input type="confPassword" name="confPass" id="confPassword" placeholder="Потвърдете Парола"
+                        class="montserrat-sm" required>
                 </div>
                 <div>
                     <label for="bdayDate" class="montserrat-md">Дата на раждане</label>
-                    <input type="date" name="bdayDate" id="bday" class="montserrat-sm">
+                    <input type="date" name="bdayDate" id="bday" class="montserrat-sm" min="1900-01-01" max="2011-01-01"
+                        required>
                 </div>
                 <div>
                     <label for="course" class="montserrat-md">Изберете семинар</label>
-                    <select name="course" id="courseSelect" class="montserrat-sm">
-                        <option value="Пейзажна фотография" class="montserrat-sm" selected>Пейзажна фотография</option>
-                        <option value="Портретна фотография" class="montserrat-sm">Портретна фотография</option>
-                        <option value="Продуктова фотография" class="montserrat-sm">Продуктова фотография</option>
+                    <select name="course" id="courseSelect" class="montserrat-sm" onchange="validateDate();" required>
+                        <option disabled selected value=""> -- Изберете семинар -- </option>
+                        <option value="Пейзажна" class="montserrat-sm">Пейзажна фотография</option>
+                        <option value="Портретна" class="montserrat-sm">Портретна фотография</option>
+                        <option value="Продуктова" class="montserrat-sm">Продуктова фотография</option>
                     </select>
                 </div>
+
                 <div style="flex-direction: row; justify-content: space-around;">
                     <div style="width: 40%;">
                         <label for="dateCourse" class="montserrat-md">Дата на семинар</label>
-                        <input type="date" name="dateCourse" id="dateC" class="montserrat-sm">
+                        <input type="text" name="dateCourse" id="dateC" class="montserrat-sm" required>
                     </div>
                     <div style="width: 40%;">
                         <label for="timeCourse" class="montserrat-md">Час на семинар</label>
-                        <input type="time" name="timeCourse" id="timeC" class="montserrat-sm">
+                        <select name="timeCourse" id="timeC" class="montserrat-sm" required></select>
                     </div>
+                </div>
+                <div id="btnDiv">
+                    <button type="button" class="btnForm" onclick="validateAllData();">Запиши се!</button>
+                    <button type="reset" class="btnForm">Започни наново</button>
                 </div>
             </form>
         </fieldset>
     </main>
+
 
     <!--Финална част-->
     <footer style="border-top: 10px dashed #FEFAE0;">
