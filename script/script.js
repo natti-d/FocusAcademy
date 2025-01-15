@@ -104,7 +104,7 @@ function validateDate() {
     
 
     //Час
-    timeCourse.innerHTML = '<option disabled selected value=''> -- Изберете час -- </option>';
+    timeCourse.innerHTML = '<option disabled selected value=""> -- Изберете час -- </option>';
     let options = [];
 
     if (course == 'Продуктова') {
